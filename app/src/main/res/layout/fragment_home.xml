@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/rounded_corner"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="10dp"
+              android:layout_above="@+id/add_card"
+              android:id="@+id/linear"
+>
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash Flow"
+            android:id="@+id/cashFlow"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/PrimaryDarkColor"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+             />
+        <RelativeLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@+id/cashFlow"
+                      >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE"
+                android:id="@+id/date_top"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NET CHANGE"
+                android:id="@+id/net_top"
+                android:textSize="15dp"
+                android:layout_alignTop="@+id/total_top" android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTALS"
+                android:id="@+id/total_top"
+                android:textSize="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignTop="@+id/date_top"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trans_list"
+            android:layout_alignParentTop="true"
+            android:textSize="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="70dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textlines"
+            android:divider="#B1B1B1"
+            android:dividerHeight="0.3dp"
+            android:gravity="center" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_alignTop="@+id/trans_list"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Card"
+        android:id="@+id/add_card"
+        android:textColor="@color/app_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
